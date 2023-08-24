@@ -1,12 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
-import NewsList from  './components/NewsList';
+import NewsList from './components/NewsList';
 
 function App() {
   return (
     <div className='App'>
-      <NewsList/>
+      <NewsList />
     </div>
   );
 }
