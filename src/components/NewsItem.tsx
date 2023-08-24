@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { News } from './../interfaces';
 import './../styles/News.scss';
 import { ReactComponent as Star } from './../images/star.svg';
@@ -7,9 +6,7 @@ import { ReactComponent as User } from './../images/user.svg';
 const NewsItem: React.FC<{
   news: News;
 }> = ({ news }) => {
-  const formatedDate = new Date(news.time * 1000).toLocaleDateString('en-UK');
-
-  useEffect(() => {}, []);
+  const formattedDate = new Date(news.time * 1000).toLocaleDateString('en-UK');
 
   return (
     <div className='cards-wrapper__item'>
@@ -17,7 +14,6 @@ const NewsItem: React.FC<{
         <img src={require('./../images/news-image.png')} />
       </div>
       <div className='score'>
-        {' '}
         <span>{news.score}</span>
       </div>
       <a href={news.url} target='_blank'>
@@ -30,7 +26,7 @@ const NewsItem: React.FC<{
           <Star />
           <span>{news.karma}</span>
         </div>
-        <div className='time'>{formatedDate}</div>
+        <div className='time'>{formattedDate}</div>
       </div>
     </div>
   );
