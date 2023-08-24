@@ -48,10 +48,6 @@ const NewsList = () => {
       .finally(() => setIsLoading(false));
   }, []);
 
-  useEffect(() => {
-    console.log(newsList);
-  }, [newsList]);
-
   return (
     <>
       <h1>Hacker News</h1>
