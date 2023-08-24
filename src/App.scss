@@ -1,0 +1,29 @@
+@import "./styles/variables";
+
+.App {
+  min-height: 100vw;
+  background-color: $background-color;
+  color: $text-color;
+  padding: 25px;
+  text-align: center;
+  font-family: $main-font;
+  font-size: 15px;
+
+  h1{
+    margin: 20px 0;
+    font-family: $heding-font;
+    color: $main-green;
+    font-size: 70px;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 449px){
+  .App{
+      padding: 15px;
+
+      h1{
+        font-size: 50px;
+      }
+  }
+}
